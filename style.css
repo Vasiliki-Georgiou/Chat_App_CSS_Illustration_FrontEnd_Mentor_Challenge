@@ -6,6 +6,7 @@
 
 :root {
     --primary-text-pale-violet: hsl(276, 100%, 81%);
+    --primary-chatbox-violet: hsl(272, 51%, 90%, 1);
     --primary-text-moderate-violet: hsl(276, 55%, 52%);
     --primary-text-desaturated-dark-violet: hsl(271, 15%, 43%);
     --primary-text-grayish-blue: hsl(206, 6%, 79%);
@@ -32,26 +33,26 @@ body {
 
 .purple-background,
 .beige-background {
-    width: 28vw;
-    height: 100vh;
+    width: 60vw;
+    height: 60vh;
     position: absolute;
     z-index: -10;
 }
 
 .purple-background {
-    border-bottom-left-radius: 150px;
-    border-bottom-right-radius: 150px;
-    background: linear-gradient(to bottom, var(--gradients-light-magenta), var( --gradients-light-violet));
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background: linear-gradient(var(--gradients-light-magenta), var( --gradients-light-violet), var( --gradients-light-violet));
     top: 0;
-    left: -50px;
+    left: -10%;
 }
 
 .beige-background {
     background-color: var(--secondary-light-grayish-violet);
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
-    bottom: 0;
-    right: -50px;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    bottom: -10%;
+    right: -15%;
 }
 
 main {
@@ -59,26 +60,28 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 60px;
 }
 
 section.mobile-illustration {
     width: 300px;
-    height: 510px;
+    height: 520px;
     background-color: var(--secondary-light-grayish-violet);
-    border: 3px solid red;
+    border: 5px solid #ffffff;
     border-radius: 20px;
-    padding: 15px;
+    padding: 5px;
     position: relative;
+    box-shadow: 5px 5px rgba(238, 238, 242, 0.2);
 }
 
 .white-background {
-    width: 150px;
-    height: 30px;
+    width: 125px;
+    height: 25px;
     background-color: var( --secondary-white);
-    border-radius: 20px;
+    border-radius: 10px;
     position: absolute;
     top: 0;
-    transform: translateX(40%);
+    transform: translate(60%, -20%);
 }
 
 .mobile-illustration article.user-presentation {
@@ -119,8 +122,6 @@ section.mobile-illustration {
 }
 
 .mobile-screen-messages {
-    /* display: flex;
-    flex-direction: column; */
     position: relative;
     font-size: 8px;
 }
@@ -133,7 +134,7 @@ section.mobile-illustration {
 }
 
 .dog-walker {
-    background-color: var(--primary-text-pale-violet);
+    background-color: var(--primary-chatbox-violet);
     color: var(--primary-text-moderate-violet);
     border-radius: 10px;
     border-bottom-left-radius: 5px;
@@ -149,7 +150,11 @@ section.mobile-illustration {
 }
 
 .dog-images {
-    margin-left: 45%;
+    margin-left: 54%;
+}
+
+.dog-owner:nth-child(odd) {
+    margin-left: 73%;
 }
 
 .dog-images img {
@@ -203,7 +208,7 @@ section.mobile-illustration {
     border-radius: 12px;
     font-family: inherit;
     width: 90%;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .chatbox input::placeholder {
@@ -217,21 +222,78 @@ section.mobile-illustration {
     background-color: var(--secondary-very-dark-desaturated-violet);
     border: none;
     border-radius: 50%;
-    position: fixed;
-    transform: translate(-120%, -20%);
+    position: sticky;
+    transform: translate(-120%, -5%);
     padding: 2px;
 }
 
 section.product-presentation {
     width: 300px;
-    font-size: 16px;
+    font-size: 20px;
+    margin-top: 50px;
+    text-align: center;
+    line-height: 1.2rem;
 }
 
 .product-presentation h1 {
     color: var(--primary-text-very-dark-desaturated-violet);
+    font-weight: 500;
 }
 
 .product-presentation p {
     color: var(--primary-text-dark-grayish-violet);
     font-size: 12px;
+}
+
+/* Media Queries */
+
+@media(min-width: 768px) {
+.purple-background,
+.beige-background {
+    width: 50vw;
+    }
+}
+
+@media(min-width: 1024px) {
+.purple-background,
+.beige-background {
+    width: 50vw;
+    height: 90vh;
+    }
+
+.purple-background {
+    left: -20%;
+    }
+
+.beige-background {
+    right: -25%;
+}
+
+main {
+    flex-direction: row;
+}
+
+section.product-presentation {
+    width: 400px;
+    margin-left: 50px;
+    text-align: left;
+}
+}
+
+@media(min-width: 1440px) {
+
+.purple-background {
+    left: -25%;
+}
+    
+.beige-background {
+    right: -25%;
+}
+
+section.mobile-illustration {
+    transform: translateX(-20%);
+}
+section.product-presentation {
+    width: 450px;
+}
 }
