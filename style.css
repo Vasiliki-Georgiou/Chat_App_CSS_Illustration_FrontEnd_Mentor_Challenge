@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     background-color: var(--secondary-white);
     margin: 0;
     position: relative;
@@ -257,6 +257,11 @@ section.product-presentation {
 }
 
 @media(min-width: 1024px) {
+
+body {
+    overflow: hidden;
+}
+
 .purple-background,
 .beige-background {
     width: 50vw;
@@ -265,6 +270,7 @@ section.product-presentation {
 
 .purple-background {
     left: -20%;
+    top: -10%;
 }
 
 .beige-background {
