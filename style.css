@@ -20,6 +20,7 @@
     --secondary-very-light-magenta: hsl(289, 100%, 72%);
 }
 
+
 body {
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -51,7 +52,7 @@ body {
     background-color: var(--secondary-light-grayish-violet);
     border-top-right-radius: 100%;
     border-top-left-radius: 100%;
-    bottom: -10%;
+    bottom: -20%;
     right: -15%;
 }
 
@@ -248,10 +249,11 @@ section.product-presentation {
 /* Media Queries */
 
 @media(min-width: 768px) {
+
 .purple-background,
 .beige-background {
     width: 50vw;
-    }
+}
 }
 
 @media(min-width: 1024px) {
@@ -259,14 +261,15 @@ section.product-presentation {
 .beige-background {
     width: 50vw;
     height: 90vh;
-    }
+}
 
 .purple-background {
     left: -20%;
-    }
+}
 
 .beige-background {
     right: -25%;
+    bottom: -30%;
 }
 
 main {
@@ -285,14 +288,15 @@ section.product-presentation {
 .purple-background {
     left: -25%;
 }
-    
+        
 .beige-background {
     right: -25%;
 }
-
+    
 section.mobile-illustration {
     transform: translateX(-20%);
 }
+
 section.product-presentation {
     width: 450px;
 }
